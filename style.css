@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto Slab", serif;
+    background-color: white;
+}
+
+.cabeca {
+    background-color: #1abc9c;
+    text-align: center;
+    padding: 20px;
+
+}
+
+.navegacao {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+}
+
+.navegacao a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: #333 solid 1px;
+}
+
+.navegacao a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+
+
+p::selection {
+    color: red;
+}
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.left-container {
+    flex: 25%;
+    background-color: #e5e4e4;
+    padding: 20px;
+}
+
+.right-container {
+    flex: 75%;
+    padding: 20px;
+}
+
+.fake-img {
+    background-color: #c9c8c8;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rodape {
+    background-color: #333;
+    padding: 40px;
+    text-align: center;
+    color: white;
+}
+
+@media (max-width: 750px) {
+    .container {   
+      flex-direction: column-reverse;
+    }
+
+    /*NÃO PRECISA ADICIONAR ORDEM, NESTE CASO, PORQUE O FLEX DIRECTION MUDA A ORDEM DOS ELEMENTOS; mas caso queira adicionar mais conteúdo e mudar sua ordem, talvez a propriedade(order) seja necessária.*/
+    
+    /* .right-container {
+        order: 1;
+    }
+
+    .left-container {
+        order: 2;
+    } */
+}
+
+
+
+
+
+footer {
+    background-color: #333;
+    color:white;
+    padding: 20px 0;
+    position: relative;
+    width: 100%;
+    
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+}
+
+.footer-section h3 {
+    margin-bottom: 15px;
+}
+
+.footer-section p, .footer-section ul {
+    margin: 0;
+    padding: 0;
+}
+
+.footer-section ul {
+    list-style: none;
+
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+.footer-section ul li a:hover {
+    color: red; 
+}
+
+.social-media a {
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.social-media img {
+    width: 24px;
+    height: 24px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px 20px;
+    background-color: #222;
+    margin-top: 20px;
+}
+
+@media (max-width:768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        text-align: center;
+        margin: 20px 0;
+    }
+}
